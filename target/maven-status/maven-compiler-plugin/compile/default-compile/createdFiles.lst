@@ -1,0 +1,5 @@
+com/qa/todo/model/Task.class
+com/qa/todo/service/TaskService.class
+com/qa/todo/App.class
+com/qa/todo/respository/TaskRepository.class
+com/qa/todo/controller/TaskController.class
