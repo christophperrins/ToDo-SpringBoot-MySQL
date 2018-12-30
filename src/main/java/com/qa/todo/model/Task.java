@@ -2,10 +2,8 @@ package com.qa.todo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table (name = "Tasks")
 public class Task {
 
 	@Id
