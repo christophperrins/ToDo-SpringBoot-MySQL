@@ -19,21 +19,25 @@ public class TaskController {
 	
 	@RequestMapping (value = "tasks", method = RequestMethod.GET)
 	public Iterable<Task> getAllTasks(@RequestParam(value="apikey", required=true) String apikey) {
+		System.out.println("controllerGet");
 		return taskService.getTasks(apikey);
 	}
 	
 	@RequestMapping (value = "tasks", method = RequestMethod.POST)
 	public Iterable<Task> addTask(@RequestBody Task task, @RequestParam(value="apikey", required=true) String apikey) {
+		System.out.println("controllerPost");
 		return taskService.postTask(task, apikey);
 	}
 	
 	@RequestMapping (value = "tasks/{identifier}", method = RequestMethod.PUT)
 	public Iterable<Task> updateTask(@RequestBody Task task, @PathVariable String identifier, @RequestParam(value="apikey", required=true) String apikey) {
+		System.out.println("controllerPut");
 		return taskService.putTask(task, identifier, apikey);
 	}
 	
 	@RequestMapping (value = "tasks/{identifier}", method = RequestMethod.DELETE)
 	public Iterable<Task> deleteTask(@PathVariable String identifier, @RequestParam(value="apikey", required=true) String apikey) {
+		System.out.println("controllerDelete");
 		return taskService.deleteTask(identifier, apikey);
 	}
 	
