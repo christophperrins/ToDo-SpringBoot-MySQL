@@ -1,5 +1,5 @@
 # Todo
-
+  
 ### Operating System image: Ubuntu 18.04 LTS Minimal
 
 Go to Google Cloud Platform
