@@ -61,11 +61,9 @@ public class TaskService {
 	}
 	
 	public Iterable<Task> deleteTask(@PathVariable String identifier, String apikey) {
-		System.out.println("delete1");
 		if(!userTasksRepository.findById(identifier).get().getAuthToken().equals(apikey)) {
 			return null;
 		}
-		System.out.println("delete2");
 		Task task = taskRepository.findById(identifier).get();
 		String taskID = task.getIdentifier();
 		Iterable<UserTasks> allUserTasks = userTasksRepository.findAll();
